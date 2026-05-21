@@ -1,0 +1,185 @@
+/* ─── Chat window shell ─────────────────────────────────────── */
+.chatWindow {
+    background-color: var(--bg-primary);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ─── Navbar ────────────────────────────────────────────────── */
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.navbar span {
+    margin: 0 1rem;
+}
+
+.userIcon {
+    background-color: var(--accent-blue);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    overflow: hidden;
+}
+
+.userIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.userIcon:hover {
+    opacity: 0.85;
+}
+
+/* ─── Chat area (scrollable) ────────────────────────────────── */
+.chatArea {
+    flex: 1;
+    min-height: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    padding: 20px 24px;
+}
+
+/* Classy slim scrollbar */
+.chatArea::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+.chatArea::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 99px;
+    transition: background 0.2s ease;
+}
+
+.chatArea::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+.chatArea {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* ─── Loader — fixed between chat area and input box ────────── */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 10px 0;
+    flex-shrink: 0;
+}
+
+/* ─── Chat input area ───────────────────────────────────────── */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-bottom: 8px;
+}
+
+.inputBox {
+    width: 100%;
+    max-width: var(--input-max-width);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: var(--bg-input);
+    padding: 20px;
+    border-radius: var(--radius-xl);
+    font-size: 1rem;
+    box-shadow: var(--shadow-input);
+}
+
+input:focus {
+    outline: none;
+}
+
+#submit {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+#submit i:hover,
+#submit:hover {
+    color: var(--text-primary);
+}
+
+.info {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+}
+
+/* ─── Dropdown ──────────────────────────────────────────────── */
+.dropDown {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 160px;
+    background-color: var(--bg-elevated);
+    padding: 0.3rem 0.5rem;
+    border-radius: var(--radius-md);
+    text-align: left;
+    z-index: 1000;
+    box-shadow: var(--shadow-dropdown);
+}
+
+.dropDownItem {
+    font-size: 0.875rem;
+    margin: 0.2rem 0;
+    padding: 0.5rem 0.4rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.dropDownItem:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}

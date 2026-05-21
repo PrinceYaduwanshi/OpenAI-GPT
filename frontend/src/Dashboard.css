@@ -1,0 +1,208 @@
+/* ─── Page ──────────────────────────────────────────────────── */
+.dashPage {
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: var(--bg-primary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+}
+
+/* ─── Navbar ────────────────────────────────────────────────── */
+.dashNav {
+    width: 100%;
+    max-width: 860px;
+    height: 64px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 28px;
+}
+
+.dashBrand {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-heading);
+}
+
+.navLoginBtn {
+    margin: 0;
+    padding: 7px 18px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: transparent;
+
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-family: var(--font-primary);
+
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.navLoginBtn:hover {
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* ─── Hero ──────────────────────────────────────────────────── */
+.dashHero {
+    width: 100%;
+    max-width: 660px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 72px 28px 52px;
+    gap: 20px;
+
+    animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Eyebrow */
+.heroEyebrow {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+    margin: 0;
+}
+
+/* Headline — big, warm, humanly */
+.heroTitle {
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    color: var(--text-heading);
+    margin: 4px 0 0;
+}
+
+/* Subtitle */
+.heroSub {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 4px 0 8px;
+}
+
+/* CTA — matches login button */
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 13px 30px;
+
+    border-radius: 999px;
+    border: none;
+
+    background: linear-gradient(135deg, #ffffff 0%, #e2e2e2 100%);
+    color: #0d0d0d;
+
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    transition: opacity 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+}
+
+.ctaBtn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 18px rgba(255, 255, 255, 0.16);
+}
+
+.ctaBtn:active {
+    transform: translateY(0);
+}
+
+/* Small hint below CTA */
+.ctaNote {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.22);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* ─── Feature list ──────────────────────────────────────────── */
+.dashFeatures {
+    width: 100%;
+    max-width: 660px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 0 28px 80px;
+
+    animation: fadeUp 0.6s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.featureItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.featureItem:last-child {
+    border-bottom: none;
+}
+
+.featureIcon {
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+}
+
+.featureTitle {
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin: 0 0 5px;
+    letter-spacing: -0.01em;
+}
+
+.featureDesc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ─── Footer ────────────────────────────────────────────────── */
+.dashFooter {
+    width: 100%;
+    padding: 18px 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: 0.02em;
+}
