@@ -63,3 +63,15 @@ ChatFusionAI/
     ├── middlewares/
     ├── config/
     └── ...
+```
+
+---
+
+## 📥 Clone and Run the Project Locally
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
