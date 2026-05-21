@@ -1,4 +1,4 @@
-# ChatFusion AI
+# OpenAI-GPT Project (ChatFusion AI)
 
 ChatFusion AI is a full-stack AI conversational platform inspired by modern GPT-style applications.  
 The project supports secure authentication, persistent chat threads, Google OAuth login, and AI-powered conversations using a scalable MERN architecture.
