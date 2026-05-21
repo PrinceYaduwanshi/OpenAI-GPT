@@ -75,3 +75,65 @@ ChatFusionAI/
 git clone YOUR_REPOSITORY_URL
 ```
 
+### 2️⃣ Navigate into Project Folder
+```bash
+cd OpenAI-GPT
+```
+### 🔹Frontend Setup
+
+### 3️⃣ Navigate to Frontend
+```bash
+cd frontend
+```
+
+### 4️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 5️⃣ Create .env File
+```bash
+VITE_BACKEND_URL=http://localhost:8000
+```
+
+### 6️⃣ Start Frontend
+```bash
+npm run dev
+```
+
+#### Frontend will run on http://localhost:5173
+
+### 🔹 Backend Setup
+
+### 7️⃣ Open New Terminal and Navigate to Backend
+```bash
+cd backend
+```
+
+### 8️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 9️⃣ Create .env File
+```bash
+MONGO_DB_URI=YOUR_MONGODB_URI
+
+SESSION_SECRET=YOUR_SESSION_SECRET
+
+GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT_ID
+
+GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_CLIENT_SECRET
+
+GOOGLE_CALLBACK_URL=http://localhost:8000/auth/google/callback
+
+FRONT_END_URL=http://localhost:5173
+```
+### 🔟 Start Backend Server
+```bash
+node server.js
+```
+
+#### Backend will run on http://localhost:8000
+
+### Now open http://localhost:5173 on your browser to run the application
